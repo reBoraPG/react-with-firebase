@@ -1,0 +1,9 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Örnek: Sadece 1 Ağustos 2025'e kadar test amaçlı izin ver
+    match /{document=**} {
+      allow read, write: if request.time < timestamp.date(2025, 8, 1);
+    }
+  }
+}
