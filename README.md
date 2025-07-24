@@ -37,7 +37,7 @@ service cloud.firestore {
 **5- Press Enter to continue. Finally, you will be asked a yes/no question. Here, select “y” for “Configure as a single-page app (rewrite all urls to /index.html)” and continue.
 **6- For “Set up automatic builds and deploys with GitHub?”, press Enter and select “n” since the build and deploy will be done from the computer instead of GitHub.
 **7- For “File public/index.html already exists. Overwrite? (y/N)”, press Enter and select “n” to continue.
-11- Run the “npx tailwindcss init” command and update the files on GitHub with “tailwind.config.js” & “postcss.config.js”.
+11- Run the "npm install -D tailwindcss postcss autoprefixer" & “npx tailwindcss init -p” command and update the files on GitHub with “tailwind.config.js” & “postcss.config.js”.
 12- View your project information with “firebase projects:list”. Select the project with the “firebase use --add” command. Continue by typing “default” for the first question.
 13- You can now publish using the “npm run build” and “firebase deploy --only hosting” commands.
 *** You can review the application by automatically redirecting to “local:3000” on your computer with the “npm start” command. The application is not published; only how it works locally is observed. This allows you to determine whether the issue is related to the internet, computer, or Firebase.
